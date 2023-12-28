@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { Search } from "@mui/icons-material";
 import AppBar from "@mui/material/AppBar";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -51,8 +50,16 @@ function Navbar() {
             <Typography variant="h6">About me</Typography>
           </StyledLink>
 
+          <StyledLink to="/Courses">
+            <Typography variant="h6">Courses</Typography>
+          </StyledLink>
+
           <StyledLink to="/Blog">
             <Typography variant="h6">Blog</Typography>
+          </StyledLink>
+
+          <StyledLink to="/Contact">
+            <Typography variant="h6">Contact</Typography>
           </StyledLink>
 
           <StyledLink target="_blank" to="https://google.com">
