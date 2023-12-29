@@ -106,15 +106,15 @@ const courses = [
           link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/1.OCaml",
         },
         {
-          label: "HW2 - Polymorphism & Generics in Java",
+          label: "HW2 - Polymorphism & Generics",
           link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/2.Polymorphism",
         },
         {
-          label: "HW3 - Functional Programming in Java",
+          label: "HW3 - Functional Programming",
           link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/3.functional-programming",
         },
         {
-          label: "HW4 - iterable-BST in Java & Python",
+          label: "HW4 - Iterable-BST",
           link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/4.iterable-BST",
         },
       ],
@@ -126,26 +126,26 @@ const courses = [
         "Introduces systems-level programming concepts using the C language and assembly language, and explores the correspondence of programming constructs in these languages. Topics include internal data representation, basic instructions and control structures, bitwise operations, arithmetic operations, memory management, pointers, function calls and parameter passing, linking and loading. Included is an overview of computer architecture and organization topics, including von Neumann architecture, the memory hierarchy, and basics of pipelining.",
       supplements: [
         {
-          label: "HW1 - OCaml",
-          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/1.OCaml",
+          label: "HW1 - Bit Manipulation",
+          link: "https://github.com/naxy-dong/System-Fundamentals-1/tree/main/1.bit-manipulation",
         },
         {
-          label: "HW2 - Polymorphism & Generics in Java",
-          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/2.Polymorphism",
+          label: "HW2 - Encryption & Decryption",
+          link: "https://github.com/naxy-dong/System-Fundamentals-1/tree/main/2.encryption-decryption",
         },
         {
-          label: "HW3 - Functional Programming in Java",
-          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/3.functional-programming",
+          label: "HW3 - Matrix Manipulation",
+          link: "https://github.com/naxy-dong/System-Fundamentals-1/tree/main/3.matrix-manipulation",
         },
         {
-          label: "HW4 - iterable-BST in Java & Python",
-          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/4.iterable-BST",
+          label: "HW4 - Social Network",
+          link: "https://github.com/naxy-dong/System-Fundamentals-1/tree/main/4.social-network",
         },
       ],
     },
     {
       id: 13,
-      title: "CSE 475 - Teaching Curriculum",
+      title: "CSE 475(CSE 214 TA) - Teaching Curriculum",
       description: `Teaching Assistant for CSE 214. Duties included 
       •	Prepared recitation materials and taught core data structure concepts in Java to a recitation of 27 students.
       •	Held office hours (5 hours weekly) to assist the students with homework and curriculum.
@@ -166,16 +166,52 @@ const courses = [
       title: "CSE 320 - Systems Fundamentals II",
       description:
         "This course introduces C programming and essential concepts of operating systems, concurrency, and performance analysis, focused around several cross-cutting examples, such as memory management, error handling, and threaded programming. In this course, operating systems concepts are considered from the point of view of the application programmer, and the focus is on APIs for interacting with an operating system. A companion course, CSE 306, considers operating systems from the point of view of the OS kernel implementer.",
+      supplements: [
+        {
+          label: "HW1 - Diff Patch Applier",
+          link: "https://github.com/naxy-dong/System-Fundamental-2/tree/main/homework_submission/cse320/hw_feedback/hw1",
+        },
+        {
+          label: "HW2 - Debugging Larry Wall's 1985 patch program.",
+          link: "https://github.com/naxy-dong/System-Fundamental-2/tree/main/homework_submission/cse320/hw_feedback/hw2",
+        },
+        {
+          label: "HW3 - Dynamic Memory Allocator",
+          link: "https://github.com/naxy-dong/System-Fundamental-2/tree/main/homework_submission/cse320/hw_feedback/hw3",
+        },
+        {
+          label: "HW4 - Crypto Exchange Watcher",
+          link: "https://github.com/naxy-dong/System-Fundamental-2/tree/main/homework_submission/cse320/hw_feedback/hw4",
+        },
+        {
+          label: "HW5 - MultiThreaded-Tic-Tac-Toe-Server",
+          link: "https://github.com/naxy-dong/MultiThreaded-Tic-Tac-Toe-Server",
+        },
+      ],
     },
     {
       id: 16,
       title: "CSE 310 - Computer Networks",
       description:
         "Overview of computer networks and the Internet. Concept of end systems, access networks, clients and servers. Connection-oriented and connectionless services. Circuit switching and packet switching. Description of Internet protocol layers, including application layer, transport layer, network layer and link layer. Architecture of the current Internet and the World-Wide Web. TCP/IP protocol stack. Internet routing and addressing. Local area network protocols, Ethernet hubs and switches. Wireless LANs. Multimedia networking.",
+      supplements: [
+        {
+          label: "HW1 - DNS resolver implementation",
+          link: "https://github.com/naxy-dong/Computer-Networks/tree/main/Dong-Yuxiang-assignment1",
+        },
+        {
+          label: "HW2 - PCAP analysis & Congestion Control",
+          link: "https://github.com/naxy-dong/Computer-Networks/tree/main/Dong-Yuxiang-assignment2",
+        },
+        {
+          label: "HW3 - ICMP Ping & ARP analysis",
+          link: "https://github.com/naxy-dong/Computer-Networks/tree/main/Dong-Yuxiang-assignment3",
+        },
+      ],
     },
     {
       id: 17,
-      title: "CSE 475 - Teaching Curriculum",
+      title: "CSE 475(CSE 216 TA) - Teaching Curriculum",
       description: `Teaching Assistant for CSE 216, duties included
       •	Lead two one-hour-long recitations weekly consisting of a total of 57 students and cover topics involving OCaml, Java, and Python.
       •	Hold office hours (3 hours weekly) and conduct review sessions before the exam to ensure student success.
@@ -207,18 +243,68 @@ const courses = [
       title: "CSE 532 - Theory of Database Systems",
       description:
         "The course will cover advanced topics in modern database systems, including object-oriented databases, rule-based databases, temporal and active databases, parallel and distributed databases, distributed object model, data mining, on-line analytical processing, data warehousing, multimedia databases.",
+      supplements: [
+        {
+          label: "HW1 - Complex SQL queries: NY Collision Patterns",
+          link: "https://github.com/naxy-dong/Theory-Of-Database-Systems/tree/main/1.NY-Collision-Patterns",
+        },
+        {
+          label: "HW2 - SQL procedure: Compute Histogram",
+          link: "https://github.com/naxy-dong/Theory-Of-Database-Systems/tree/main/2.Compute-Histogram",
+        },
+        {
+          label: "HW3 - Spacial Queries",
+          link: "https://github.com/naxy-dong/Theory-Of-Database-Systems/tree/main/3.Spacial-Queries",
+        },
+        {
+          label: "HW4 - Hadoop & Spark: TEDS Data Analysis",
+          link: "https://github.com/naxy-dong/Theory-Of-Database-Systems/tree/main/4.TEDS-Data-Analysis",
+        },
+        {
+          label: "HW5 - XQuery: DBLP XML Queries",
+          link: "https://github.com/naxy-dong/Theory-Of-Database-Systems/tree/main/5.DBLP-XML-Queries",
+        },
+      ],
     },
     {
       id: 22,
       title: "CSE 316 - Software Development",
       description:
         "Introduction to systematic design, development and testing of software systems, including event-driven and Web programming, information management, databases, principles and practices for secure computing, and version control. Students apply these skills in the construction of large, robust programs.",
+      supplements: [
+        {
+          label: "Project - FakeStackOverflow",
+          link: "https://github.com/sbu-ckane-f23-cse316-projectorg/projectfakeso-top-of-the-merning",
+        },
+      ],
     },
     {
       id: 23,
       title: "CSE 306 - Operating Systems",
       description:
         "Students are introduced to the structure of modern operating systems. Topics include virtual memory, resource allocation strategies, concurrency, and protection. The design and implementation of a simple operating system are performed. This course focuses on teaching the skills required to design and build modules of an operating system kernel. It covers key algorithms and architectures.",
+      supplements: [
+        {
+          label: "HW1 - System Call",
+          link: "https://github.com/naxy-dong/Operating-System/tree/main/1.system-call",
+        },
+        {
+          label: "HW2 - Kernel Data Structure",
+          link: "https://github.com/naxy-dong/Operating-System/tree/main/2.kernel-data-structure",
+        },
+        {
+          label: "HW3 - Super Simple Distributed Shared Memory",
+          link: "https://github.com/naxy-dong/Operating-System/tree/main/3.s2dsm_p2",
+        },
+        {
+          label: "HW4 - Profiler",
+          link: "https://github.com/naxy-dong/Operating-System/tree/main/4.profiler_p2",
+        },
+        {
+          label: "HW5 - Super Simple File System",
+          link: "https://github.com/naxy-dong/Operating-System/tree/main/5.s2fs",
+        },
+      ],
     },
     {
       id: 24,

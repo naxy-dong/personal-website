@@ -1,4 +1,4 @@
-import { Card, styled } from "@mui/material";
+import { Card } from "@mui/material";
 import courses from "../data/courses";
 import CourseItem from "./CourseItem";
 import CourseItemWithSupplements from "./CourseItemWithSupplements";

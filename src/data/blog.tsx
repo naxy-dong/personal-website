@@ -34,7 +34,9 @@ const blogData = [
         ${makeParagraph(`For my project, I want to make my website special and ambitious. My
         idea is to make each page contain a unique mechanic for navigation
         while maintaining the fun experience for the user. But that's for later. For now, I want to make a simple website that looks similar to other people and later put my own spin to it.`)}
-        ${makeParagraph(`Another goal for this personal website is for me to learn TypeScript. I've always heard the controversy that TypeScript is better than Vanilla JavaScript, but I've never tried it myself.`)}
+        ${makeParagraph(
+          `Another goal for this personal website is for me to learn TypeScript. I've always heard the controversy that TypeScript is better than Vanilla JavaScript, but I've never tried it myself.`
+        )}
         ${makeList(
           ["Home", "About Me", "Courses", "Blog", "Contact", "CV"],
           "Here's a list of pages I want to make:"
@@ -48,7 +50,7 @@ const blogData = [
 
       return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
     },
-  }
+  },
 ];
 
 export default blogData;
