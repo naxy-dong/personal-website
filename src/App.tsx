@@ -6,10 +6,14 @@ import AboutMe from "./Pages/AboutMe";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import Courses from "./Pages/Courses";
+import { ThemeProvider, createTheme } from "@mui/material";
+const darkTheme = createTheme({ palette: { mode: "dark" } });
 
 function App() {
   return (
     <>
+      <ThemeProvider theme={darkTheme}>
+
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,6 +22,8 @@ function App() {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
+      </ThemeProvider>
+
     </>
   );
 }
