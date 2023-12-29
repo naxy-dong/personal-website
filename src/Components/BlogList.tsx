@@ -9,7 +9,7 @@ function BlogList() {
         return (
           <div key={index}>
             <BlogItem
-              index={index + 1}
+              index={blogData.length - index}
               title={blog.title}
               date={blog.date}
               content={blog.content}
