@@ -12,7 +12,7 @@ const blogData = [
     date: new Date(2023, 11, 29),
     content: () => {
       const htmlContent = `
-          
+          Sometimes stackoverflow is better find . -name '*' | xargs wc -l
         `;
 
       return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;

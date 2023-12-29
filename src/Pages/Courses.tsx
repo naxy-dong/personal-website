@@ -1,5 +1,6 @@
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 import React, { useState } from "react";
+import CourseList from "../Components/CourseList";
 
 function CustomTabPanel(props: any) {
   const { children, value, index, ...other } = props;
@@ -14,7 +15,7 @@ function CustomTabPanel(props: any) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
@@ -30,7 +31,6 @@ function a11yProps(index: number) {
 
 function Courses() {
   const [value, setValue] = useState(0);
-
   const handleChange = (event: any, newValue: React.SetStateAction<number>) => {
     setValue(newValue);
   };
@@ -42,7 +42,8 @@ function Courses() {
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          aria-label="tabs for semester selection"
+          centered
         >
           <Tab label="Fall 2021" {...a11yProps(0)} />
           <Tab label="Spring 2022" {...a11yProps(1)} />
@@ -52,14 +53,8 @@ function Courses() {
           <Tab label="Spring 2024" {...a11yProps(5)} />
         </Tabs>
       </Box>
-      <CustomTabPanel value={value} index={0}>
-        Item One
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        Item Two
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        Item Three
+      <CustomTabPanel value={value} index={value}>
+        <CourseList index={value} />
       </CustomTabPanel>
     </>
   );
