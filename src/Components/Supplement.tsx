@@ -3,8 +3,8 @@ import Typography from "@mui/material/Typography";
 
 function Supplement({ label, link }: { label: string; link: string }) {
   return (
-    <Box>
-      <Link href={link} variant="h6">
+    <Box sx={{ textAlign: "left" }}>
+      <Link href={link} variant="subtitle1">
         {label}
       </Link>
     </Box>

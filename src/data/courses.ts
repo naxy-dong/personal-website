@@ -56,19 +56,19 @@ const courses = [
         "An extension of programming methodology to data storage and manipulation on complex data sets. Topics include: programming and applications of data structures; stacks, queues, lists, binary trees, heaps, priority queues, balanced trees and graphs. Recursive programming is heavily utilized. Fundamental sorting and searching algorithms are examined along with informal efficiency comparisons.",
       supplements: [
         {
-          label: "HW1 - Person Manager: ",
+          label: "HW1 - Person Manager",
           link: "https://github.com/naxy-dong/Data-Structure-2021/tree/main/1.person-manager",
         },
         {
-          label: "HW2 - Line Security Manager: ",
+          label: "HW2 - Line Security Manager",
           link: "https://github.com/naxy-dong/Data-Structure-2021/tree/main/2.line-security-manager",
         },
         {
-          label: "HW3 - Library Manager: ",
+          label: "HW3 - Library Manager",
           link: "https://github.com/naxy-dong/Data-Structure-2021/tree/main/3.library-manager",
         },
         {
-          label: "HW4 - Flight Simulator: ",
+          label: "HW4 - Flight Simulator",
           link: "https://github.com/naxy-dong/Data-Structure-2021/tree/main/4.flight-simulator",
         },
       ],
@@ -100,12 +100,48 @@ const courses = [
       title: "CSE 216 - Programming Abstractions",
       description:
         "Intermediate-level programming concepts and paradigms, including functional programming, object-orientation, basics of type systems, memory management, program and data abstractions, parameter passing, modularity, and parallel programming. Includes weekly recitations, which provide students with experience in the practice of programming in a variety of high-level languages.",
+      supplements: [
+        {
+          label: "HW1 - OCaml",
+          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/1.OCaml",
+        },
+        {
+          label: "HW2 - Polymorphism & Generics in Java",
+          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/2.Polymorphism",
+        },
+        {
+          label: "HW3 - Functional Programming in Java",
+          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/3.functional-programming",
+        },
+        {
+          label: "HW4 - iterable-BST in Java & Python",
+          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/4.iterable-BST",
+        },
+      ],
     },
     {
       id: 12,
       title: "CSE 220 - Systems Fundamentals I",
       description:
         "Introduces systems-level programming concepts using the C language and assembly language, and explores the correspondence of programming constructs in these languages. Topics include internal data representation, basic instructions and control structures, bitwise operations, arithmetic operations, memory management, pointers, function calls and parameter passing, linking and loading. Included is an overview of computer architecture and organization topics, including von Neumann architecture, the memory hierarchy, and basics of pipelining.",
+      supplements: [
+        {
+          label: "HW1 - OCaml",
+          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/1.OCaml",
+        },
+        {
+          label: "HW2 - Polymorphism & Generics in Java",
+          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/2.Polymorphism",
+        },
+        {
+          label: "HW3 - Functional Programming in Java",
+          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/3.functional-programming",
+        },
+        {
+          label: "HW4 - iterable-BST in Java & Python",
+          link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/4.iterable-BST",
+        },
+      ],
     },
     {
       id: 13,

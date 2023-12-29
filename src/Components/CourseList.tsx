@@ -1,10 +1,15 @@
+import { Card, styled } from "@mui/material";
 import courses from "../data/courses";
 import CourseItem from "./CourseItem";
 import CourseItemWithSupplements from "./CourseItemWithSupplements";
 
 function CourseList({ index }: { index: number }) {
   return courses[index].map((course) => (
-    <div key={course.id}>
+    <Card
+      key={course.id}
+      variant="outlined"
+      sx={{ display: "flex", borderRadius: 3, marginBottom: 2 }}
+    >
       {course.supplements ? (
         <CourseItemWithSupplements
           title={course.title}
@@ -14,7 +19,7 @@ function CourseList({ index }: { index: number }) {
       ) : (
         <CourseItem title={course.title} description={course.description} />
       )}
-    </div>
+    </Card>
   ));
 }
 

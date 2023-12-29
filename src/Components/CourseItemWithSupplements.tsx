@@ -15,22 +15,19 @@ function CourseItemWithSupplements({
   supplements?: { label: string; link: string }[];
 }) {
   return (
-    <Card>
-      <Grid container>
-        <Grid item xs={9}>
-          <CourseItem title={title} description={description} />
-        </Grid>
-        <Grid item xs={3}>
-          {/* Right half */}
-          <CardContent>
-            {/* <Typography variant="h6">Supplements</Typography> */}
-            {supplements?.map((supplement) => (
-              <Supplement key={supplement.label} {...supplement} />
-            ))}
-          </CardContent>
-        </Grid>
+    <Grid container>
+      <Grid item sm={12} md={9}>
+        <CourseItem title={title} description={description} />
       </Grid>
-    </Card>
+      <Grid item sm={12} md={3}>
+        <CardContent>
+          {/* <Typography variant="h6">Supplements</Typography> */}
+          {supplements?.map((supplement) => (
+            <Supplement key={supplement.label} {...supplement} />
+          ))}
+        </CardContent>
+      </Grid>
+    </Grid>
   );
 }
 
