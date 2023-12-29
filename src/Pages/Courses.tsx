@@ -13,11 +13,7 @@ function CustomTabPanel(props: any) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -37,7 +33,10 @@ function Courses() {
 
   return (
     <>
-      <Typography variant="h6">Courses</Typography>
+      <Typography variant="caption" style={{color:"salmon"}}>
+        *** Please note that some repositories are marked as private to prevent
+        other people from committing academic dishonesty.
+      </Typography>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}

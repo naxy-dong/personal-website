@@ -14,7 +14,13 @@ const courses = [
       id: 2,
       title: "WRT 102 - Intermediate Writing Workshop",
       description:
-        "A study of strategies for extended academic writing assignments including critical analysis, argument or point of view, and multi-source, college-level research essays. Students continue to develop rhetorical awareness, analytical proficiency, and academic research skills. Digitcation Portfolio: https://stonybrook.digication.com/yuxiang-dong-writing-portfolio/home-1",
+        "A study of strategies for extended academic writing assignments including critical analysis, argument or point of view, and multi-source, college-level research essays. Students continue to develop rhetorical awareness, analytical proficiency, and academic research skills.",
+      supplements: [
+        {
+          label: "Digitcation Portfolio",
+          link: "https://stonybrook.digication.com/yuxiang-dong-writing-portfolio/home-1",
+        },
+      ],
     },
     {
       id: 3,
@@ -48,6 +54,24 @@ const courses = [
       title: "CSE 214 - Data Structures & Algorithms",
       description:
         "An extension of programming methodology to data storage and manipulation on complex data sets. Topics include: programming and applications of data structures; stacks, queues, lists, binary trees, heaps, priority queues, balanced trees and graphs. Recursive programming is heavily utilized. Fundamental sorting and searching algorithms are examined along with informal efficiency comparisons.",
+      supplements: [
+        {
+          label: "HW1 - Person Manager: ",
+          link: "https://github.com/naxy-dong/Data-Structure-2021/tree/main/1.person-manager",
+        },
+        {
+          label: "HW2 - Line Security Manager: ",
+          link: "https://github.com/naxy-dong/Data-Structure-2021/tree/main/2.line-security-manager",
+        },
+        {
+          label: "HW3 - Library Manager: ",
+          link: "https://github.com/naxy-dong/Data-Structure-2021/tree/main/3.library-manager",
+        },
+        {
+          label: "HW4 - Flight Simulator: ",
+          link: "https://github.com/naxy-dong/Data-Structure-2021/tree/main/4.flight-simulator",
+        },
+      ],
     },
     {
       id: 8,
@@ -145,7 +169,8 @@ const courses = [
     {
       id: 21,
       title: "CSE 532 - Theory of Database Systems",
-      description: "The course will cover advanced topics in modern database systems, including object-oriented databases, rule-based databases, temporal and active databases, parallel and distributed databases, distributed object model, data mining, on-line analytical processing, data warehousing, multimedia databases.",
+      description:
+        "The course will cover advanced topics in modern database systems, including object-oriented databases, rule-based databases, temporal and active databases, parallel and distributed databases, distributed object model, data mining, on-line analytical processing, data warehousing, multimedia databases.",
     },
     {
       id: 22,
@@ -183,7 +208,8 @@ const courses = [
     {
       id: 27,
       title: "CSE 487 - Research",
-      description: "Research assistant for Professor Nick Nikiforakis working on the Content Integrity project. For more info: https://securitee.org/lab.html",
+      description:
+        "Research assistant for Professor Nick Nikiforakis working on the Content Integrity project. For more info: https://securitee.org/lab.html",
     },
     {
       id: 28,
@@ -194,7 +220,8 @@ const courses = [
     {
       id: 29,
       title: "CSE 508 - Network Security",
-      description: "Principles and practice of Computer Network Security. Cryptography, authentication protocols, public key infrastructures, IP/www/E-commerce security, firewalls, VPN, and intrusion detection.",
+      description:
+        "Principles and practice of Computer Network Security. Cryptography, authentication protocols, public key infrastructures, IP/www/E-commerce security, firewalls, VPN, and intrusion detection.",
     },
     {
       id: 30,
@@ -205,7 +232,8 @@ const courses = [
     {
       id: 31,
       title: "GEO 102 - The Earth",
-      description: "A summary of the processes that have shaped the earth and the other terrestrial planets as inferred from study of their surface materials, structural features, and interiors. Topics include the earth in the solar system; earth materials and rock-forming processes; surface processes and their bearing on human activities; crustal deformation and global tectonics; the earth's interior; and the geological features, compositions, and evolution of the terrestrial planets.",
+      description:
+        "A summary of the processes that have shaped the earth and the other terrestrial planets as inferred from study of their surface materials, structural features, and interiors. Topics include the earth in the solar system; earth materials and rock-forming processes; surface processes and their bearing on human activities; crustal deformation and global tectonics; the earth's interior; and the geological features, compositions, and evolution of the terrestrial planets.",
     },
   ],
 ];

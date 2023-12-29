@@ -31,3 +31,6 @@ NavBar.js
             />
           </Search>
 ```
+
+Toggle between LightMode to DarkMode 
+https://mui.com/material-ui/customization/dark-mode/
