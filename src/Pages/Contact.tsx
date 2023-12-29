@@ -10,16 +10,16 @@ function Contact() {
     <>
       <Typography variant="h6">My socials</Typography>
 
-      <IconButton aria-label="LinkedIn">
+      <IconButton aria-label="LinkedIn" target="_blank" href="https://www.linkedin.com/in/yuxiangd/">
         <LinkedInIcon fontSize="large" />
       </IconButton>
-      <IconButton aria-label="Email">
+      <IconButton aria-label="Email" target="_blank" href="mailto:yuxiang.dong@stonybrook.edu">
         <EmailIcon fontSize="large" />
       </IconButton>
-      <IconButton aria-label="GitHub">
+      <IconButton aria-label="GitHub" target="_blank" href="https://github.com/naxy-dong">
         <GitHubIcon fontSize="large" />
       </IconButton>
-      <IconButton aria-label="Discord" style={{width: "51px", height: "51px"}}>
+      <IconButton aria-label="Discord" target="_blank" href="https://discordapp.com/users/539630761947693076" style={{width: "51px", height: "51px"}}>
         <FontAwesomeIcon icon={faDiscord} />
       </IconButton>
     </>

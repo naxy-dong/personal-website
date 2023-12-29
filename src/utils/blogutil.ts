@@ -15,7 +15,7 @@ function makeList(items: any[], title?: string) {
 }
 
 function makeLink(text: string, url: string) {
-  return `<a target="_blank" href="${url}">${text}</a>`;
+  return `<a target="_blank" class="blog-link" href="${url}"><strong>${text}</strong></a>`;
 }
 
 function makeImage(url: string, alt: string, caption?: string) {
