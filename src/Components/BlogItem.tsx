@@ -32,7 +32,7 @@ function BlogItem({
       <Item elevation={1}>
         <Typography variant="h4">{index + ". " + title}</Typography>
         <Typography
-          variant="subtitle2"
+          variant="caption"
           style={{ color: "#9a9a9a", fontStyle: "italic" }}
         >
           {date.toDateString()}
