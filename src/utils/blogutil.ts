@@ -7,18 +7,21 @@ function makeParagraph(text: string) {
   return `<p>${text}</p>`;
 }
 
-function makeList(items: any[]) {
-  return `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+function makeList(items: any[], title?: string) {
+  return `
+    ${title ? `<span>${title}</span>` : ""}
+    <ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>
+  `;
 }
 
 function makeLink(text: string, url: string) {
-  return `<a href="${url}">${text}</a>`;
+  return `<a target="_blank" href="${url}">${text}</a>`;
 }
 
 function makeImage(url: string, alt: string, caption?: string) {
   return `<figure style="text-align: center;">
             <img src="${url}" alt="${alt}" style="max-width: 70%;">
-            <figcaption>${caption}</figcaption>
+            ${caption ? `<figcaption>${caption}</figcaption>` : ""}
         </figure>`;
 }
 

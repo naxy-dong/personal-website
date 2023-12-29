@@ -1,4 +1,20 @@
-import { Box, Container, Typography } from "@mui/material";
+import {
+  Paper,
+  ThemeProvider,
+  Typography,
+  createTheme,
+  styled,
+} from "@mui/material";
+
+const Item = styled(Paper)(({ theme }) => ({
+  textAlign: "left",
+  padding: "20px",
+  margin: "30px 0px",
+  color: theme.palette.text.secondary,
+  //   ...theme.typography.body2,
+}));
+
+const darkTheme = createTheme({ palette: { mode: "dark" } });
 
 function BlogItem({
   index,
@@ -12,11 +28,19 @@ function BlogItem({
   content: () => JSX.Element;
 }) {
   return (
-    <Box textAlign="left">
-      <Typography variant="h4">{index + ". " + title}</Typography>
-      <Typography variant="subtitle2">{date.toDateString()}</Typography>
-      <div>{content()}</div>
-    </Box>
+    <ThemeProvider theme={darkTheme}>
+      <Item elevation={1}>
+        <Typography variant="h4">{index + ". " + title}</Typography>
+        <Typography
+          variant="subtitle2"
+          style={{ color: "#9a9a9a", fontStyle: "italic" }}
+        >
+          {date.toDateString()}
+        </Typography>
+        <div>{content()}</div>
+        <hr style={{ borderColor: "dimgray" }} />
+      </Item>
+    </ThemeProvider>
   );
 }
 

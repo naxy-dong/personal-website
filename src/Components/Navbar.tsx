@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
-import { Search } from "@mui/icons-material";
 import AppBar from "@mui/material/AppBar";
-import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import React from "react";
@@ -27,7 +25,7 @@ const navContainerStyles = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  // gap: '3rem',
+  // gap: '1rem',
 };
 
 function Navbar() {
@@ -36,14 +34,7 @@ function Navbar() {
       <AppBar position="fixed">
         <Toolbar style={navContainerStyles}>
           <StyledLink to="/">
-            <Typography
-              variant="h6"
-              // noWrap
-              // component="div"
-              // sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            >
-              Home
-            </Typography>
+            <Typography variant="h6">Home</Typography>
           </StyledLink>
 
           <StyledLink to="/AboutMe">
@@ -65,24 +56,6 @@ function Navbar() {
           <StyledLink target="_blank" to="https://google.com">
             <Typography variant="h6">CV</Typography>
           </StyledLink>
-
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-          </IconButton> */}
-          {/* <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search> */}
         </Toolbar>
       </AppBar>
       <Toolbar />

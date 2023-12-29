@@ -1,4 +1,3 @@
-import React from "react";
 import blogData from "../data/blog";
 import BlogItem from "./BlogItem";
 import { Container } from "@mui/material";
