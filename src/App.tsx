@@ -8,6 +8,7 @@ import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import Courses from "./Pages/Courses";
 import { ThemeProvider, createTheme } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -35,6 +36,7 @@ function App() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -16,22 +16,43 @@ const blogData = [
         "useMemo",
         "https://react.dev/reference/react/useMemo"
       );
-      const darkModeLink = makeLink(
-        "dark mode",
+      const modeLink = makeLink(
+        "dark/light mode",
         "https://mui.com/material-ui/customization/dark-mode/"
+      );
+      const CSSBaseLineLink = makeLink(
+        "CSSBaseLine",
+        "https://mui.com/material-ui/react-css-baseline/"
+      );
+      const prismReactRendererLink = makeLink(
+        "prism-react-renderer",
+        "https://www.npmjs.com/package/prism-react-renderer"
       );
       const htmlContent = `
         ${makeParagraph(
-          "Day 3 of development. I stumbled upon the dark/light mode in MUI doc and couldn't resist to trying it out."
+          `Day 3 of development. I stumbled upon the ${modeLink} in MUI doc and couldn't resist to trying it out. One irritating problem I encountered is that the background color of the website would not change when I toggle the dark mode. It turns out the App.css is overriding the background color by a constant that's not within the theme of MUI. I tried useEffect from React and it did the trick. But I later found out that MUI has a ${CSSBaseLineLink} component that automatically sets the background color.`
         )}
         ${makeImage(
-          assetPath + "day2-3.png",
-          "This is my contact page.",
-          "This is my contact page."
+          assetPath + "day3-1.png",
+          "The website look on dark mode.",
+          "The website look on dark mode."
         )}
-
+        ${makeImage(
+          assetPath + "day3-2.png",
+          "The website look on light mode.",
+          "The website look on light mode."
+        )}
         ${makeParagraph(
-          `Key to self: sometimes stackoverflow is better. Use this command find . -name '*' | xargs wc -l to count the number of lines in a directory.`
+          `It's not fully dynamic and lots of colors are hardcoded. But it's a start. I will be thinking making a custom theme in the future for both the light mode and the dark mode.`
+        )}
+        ${makeParagraph(
+          `One functionality I want to add to the blog is to render a codeblock. I've found a package called ${prismReactRendererLink} that can do the job. But I will do more investigation on this and see if there's a better option.`
+        )}
+        ${makeParagraph(
+          `It's kinda of a pain to write the blog in HTML. Only if there's a built-in markdown to HTML converter I can use in React.`
+        )}
+        ${makeParagraph(
+          `Overall. the codebase is growing rapidly. From 600 lines of code in day 1 to 1220 lines of code currently. I don't think I'm writing spaghetti code. So that's a good thing I guess. After looking at the output of the command find . -name '*' | xargs wc -l. I realized that assets folder is taking up a lot of lines and they're mostly images. So I used find . -name '*' | grep -v '/assets/' | xargs wc -l to exclude the assets folder.`
         )}
         `;
 
