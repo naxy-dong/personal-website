@@ -222,6 +222,16 @@ const courses = [
       title: "VIP 295 - Vertical Integrated Projects",
       description:
         "The goal of this project is to explore engineering design through robotics. Students on this project will work on a range of robotics technology, such as autonomous control, mechanism design, microcontroller programming, and machine learning to establish successful models for implementation in my research. The outcomes will be implemented in a range of classes as well as in SBU and CEWIT Hackathons, workshops for K-12 students, and in informal learning environments, such as Makerspaces, libraries, and STEM museums.",
+      supplements: [
+        {
+          label: "VIP team Website",
+          link: "https://www.stonybrook.edu/commcms/vertically-integrated-projects/teams/_team_page/team_page.php?team=Robotics-driven%20Engineering%20Design%20Exploration",
+        },
+        {
+          label: "Project Report",
+          link: "https://drive.google.com/file/d/1fEsNDzgb50LCXs9Cv9o3LnqBjDKqGPBm/view?usp=sharing",
+        },
+      ],
     },
     {
       id: 19,

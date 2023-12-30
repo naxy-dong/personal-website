@@ -8,11 +8,41 @@ import {
 const assetPath = "src/assets/";
 const blogData = [
   {
-    title: "I want to try out something new",
+    title: "Speedy progress",
     date: new Date(2023, 11, 29),
     content: () => {
       const htmlContent = `
-          Sometimes stackoverflow is better find . -name '*' | xargs wc -l
+      ${makeParagraph(
+        `Day 2 of development. I've made a lot of progress today. I finished the courses page that can list my courses I've took throughout the my college career. I also spend quite some time uploading my work to github so that I can have my work ready on the cloud. I don't want to incentivize people committing academic dishonesty, so I've made most of my repositories private.`
+      )}
+        ${makeImage(
+          assetPath + "day2-1.png",
+          "This is my courses page.",
+          "This is my courses page."
+        )}
+        ${makeParagraph(
+          `My next step for the courses page would be some sort of filtering system (like a search function or modes) so that the information presented would not overwhelm the user. I'll have to think about the specifics and how to implement that.`
+        )}
+        ${makeParagraph(
+          `I've touched up the appearances for the blog page. Although this is a rough draft, I like how it turned out at the moment. One nitpick I have is that the blog page (or the entire website) should have better font style. I'll have to look into that.`
+        )}
+        ${makeImage(
+          assetPath + "day2-2.png",
+          "This is my blog page.",
+          "This is my blog page."
+        )}
+        ${makeParagraph(
+          `The contact page is also finished. The link to each of my socials are very simple. However icons took a while to implement. I thought I could use the material-ui icons, but I couldn't find the discord icon. I had to use fontawesome for that. And even after I used the fontawesome icon and integrated it with material-ui, the icon was too small. I had to use the style property to make the icon bigger.`
+        )}
+        ${makeImage(
+          assetPath + "day2-3.png",
+          "This is my contact page.",
+          "This is my contact page."
+        )}
+
+        ${makeParagraph(
+          `Key to self: sometimes stackoverflow is better. Use this command find . -name '*' | xargs wc -l to count the number of lines in a directory.`
+        )}
         `;
 
       return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
