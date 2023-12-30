@@ -6,15 +6,46 @@ import {
 } from "../utils/blogutil";
 
 const assetPath = "src/assets/";
+
 const blogData = [
+  {
+    title: "AHHHH MY EYES",
+    date: new Date(2023, 11, 29),
+    content: () => {
+      const useMemoLink = makeLink(
+        "useMemo",
+        "https://react.dev/reference/react/useMemo"
+      );
+      const darkModeLink = makeLink(
+        "dark mode",
+        "https://mui.com/material-ui/customization/dark-mode/"
+      );
+      const htmlContent = `
+        ${makeParagraph(
+          "Day 3 of development. I stumbled upon the dark/light mode in MUI doc and couldn't resist to trying it out."
+        )}
+        ${makeImage(
+          assetPath + "day2-3.png",
+          "This is my contact page.",
+          "This is my contact page."
+        )}
+
+        ${makeParagraph(
+          `Key to self: sometimes stackoverflow is better. Use this command find . -name '*' | xargs wc -l to count the number of lines in a directory.`
+        )}
+        `;
+
+      return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
+    },
+  },
   {
     title: "Speedy progress",
     date: new Date(2023, 11, 29),
     content: () => {
       const htmlContent = `
-      ${makeParagraph(
-        `Day 2 of development. I've made a lot of progress today. I finished the courses page that can list my courses I've took throughout the my college career. I also spend quite some time uploading my work to github so that I can have my work ready on the cloud. I don't want to incentivize people committing academic dishonesty, so I've made most of my repositories private.`
-      )}
+        ${makeParagraph(
+          `Day 2 of development. I've made a lot of progress today. I finished the courses page that can list my courses I've took throughout the my college career. I also spend quite some time uploading my work to github so that I can have my work ready on the cloud. I don't want to incentivize people committing academic dishonesty, so I've made most of my repositories private.`
+        )}
         ${makeImage(
           assetPath + "day2-1.png",
           "This is my courses page.",
@@ -57,7 +88,7 @@ const blogData = [
         "https://taiji-game.com/blog/"
       );
       const htmlContent = `
-        ${makeParagraph(`Today I've decided that I'll develop my own website out of boredom.
+        ${makeParagraph(`After 4 days of intense gaming with the new games I bought during Christmas, today I've decided that I'll develop my own website out of boredom.
         During the development of my website, I want to make a development
         blog for everything I do, including design decisions, showcase some
         of the interesting code, and things I've learned. The layout is heavily inspired by the game taiji, which the independent creator has ${taijiBlogLink} documenting the progress and updates of the game.`)}
