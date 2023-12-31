@@ -77,7 +77,7 @@ function Navbar() {
                   alignItems: "center",
                   justifyContent: "flex-end",
                   // bgcolor: "background.default",
-                  color: "text.primary",
+                  // color: "text.primary",
                 }}
               >
                 {theme.palette.mode} mode
@@ -97,6 +97,7 @@ function Navbar() {
           </Grid>
         </Toolbar>
       </AppBar>
+      {/* This toolbar is create vertical offset at the top. */}
       <Toolbar />
     </React.Fragment>
   );

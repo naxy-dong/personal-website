@@ -1,7 +1,9 @@
 import Grid from "@mui/material/Grid";
-import CardContent from "@mui/material/CardContent";
 import CourseItem from "./CourseItem";
 import Supplement from "./Supplement";
+import { Box } from "@mui/material";
+
+const leftItemStyle = { paddingRight: "16px" };
 
 function CourseItemWithSupplements({
   title,
@@ -14,16 +16,15 @@ function CourseItemWithSupplements({
 }) {
   return (
     <Grid container>
-      <Grid item sm={12} md={9}>
+      <Grid item sx={leftItemStyle} sm={12} md={9}>
         <CourseItem title={title} description={description} />
       </Grid>
       <Grid item sm={12} md={3}>
-        <CardContent>
-          {/* <Typography variant="h6">Supplements</Typography> */}
+        <Box>
           {supplements?.map((supplement) => (
             <Supplement key={supplement.label} {...supplement} />
           ))}
-        </CardContent>
+        </Box>
       </Grid>
     </Grid>
   );

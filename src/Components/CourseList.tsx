@@ -1,14 +1,19 @@
-import { Card } from "@mui/material";
+import { Paper, styled } from "@mui/material";
 import courses from "../data/courses";
 import CourseItem from "./CourseItem";
 import CourseItemWithSupplements from "./CourseItemWithSupplements";
 
+const CoursePaper = styled(Paper)(({ theme }) => ({
+  padding: "20px",
+  display: "flex",
+}));
+
 function CourseList({ index }: { index: number }) {
   return courses[index].map((course) => (
-    <Card
+    <CoursePaper
+      elevation={5}
       key={course.id}
-      variant="outlined"
-      sx={{ display: "flex", borderRadius: 3, marginBottom: 2 }}
+      sx={{ borderRadius: 3, marginBottom: 2 }}
     >
       {course.supplements ? (
         <CourseItemWithSupplements
@@ -19,7 +24,7 @@ function CourseList({ index }: { index: number }) {
       ) : (
         <CourseItem title={course.title} description={course.description} />
       )}
-    </Card>
+    </CoursePaper>
   ));
 }
 

@@ -9,8 +9,21 @@ const assetPath = "src/assets/";
 
 const blogData = [
   {
+    title: "Speedy progress",
+    date: new Date(2023, 11, 30),
+    content: () => {
+      const htmlContent = `
+        ${makeParagraph(
+          `when I first start making this project. I have a rough idea of what to put in each section. However, I really don't know what to put in the AboutMe page. This really got me thinking about the design and the color scheme of the website.`
+        )}
+        `;
+
+      return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
+    },
+  },
+  {
     title: "AHHHH MY EYES",
-    date: new Date(2023, 11, 29),
+    date: new Date(2023, 11, 30),
     content: () => {
       const useMemoLink = makeLink(
         "useMemo",
@@ -91,7 +104,6 @@ const blogData = [
           "This is my contact page.",
           "This is my contact page."
         )}
-
         ${makeParagraph(
           `Key to self: sometimes stackoverflow is better. Use this command find . -name '*' | xargs wc -l to count the number of lines in a directory.`
         )}

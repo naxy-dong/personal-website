@@ -1,11 +1,10 @@
-import { Paper, Typography, styled } from "@mui/material";
+import { Paper, Typography, styled, useTheme } from "@mui/material";
 
-const Item = styled(Paper)(({ theme }) => ({
+const BlogPaper = styled(Paper)(({ theme }) => ({
   textAlign: "left",
   padding: "20px",
   margin: "30px 0px",
   color: theme.palette.text.secondary,
-  //   ...theme.typography.body2,
 }));
 
 function BlogItem({
@@ -19,18 +18,20 @@ function BlogItem({
   date: Date;
   content: () => JSX.Element;
 }) {
+  const theme = useTheme();
+
   return (
-    <Item elevation={5}>
+    <BlogPaper elevation={5}>
       <Typography variant="h4">{index + ". " + title}</Typography>
       <Typography
         variant="caption"
-        style={{ color: "#9a9a9a", fontStyle: "italic" }}
+        sx={{ color: "text.disabled", fontStyle: "italic" }}
       >
         {date.toDateString()}
       </Typography>
       <div>{content()}</div>
-      <hr style={{ borderColor: "dimgray" }} />
-    </Item>
+      <hr style={{ borderColor: theme.palette.divider }} />
+    </BlogPaper>
   );
 }
 

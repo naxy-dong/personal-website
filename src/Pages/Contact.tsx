@@ -1,45 +1,71 @@
-import { IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
+import SubdirectoryArrowRightIcon from "@mui/icons-material/SubdirectoryArrowRight";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
+const textStyle = { marginLeft: 1 };
+
 function Contact() {
   return (
-    <>
-      <Typography variant="h6">My socials</Typography>
+    <Box display="flex" flexDirection="column" alignItems="flex-start">
+      <Typography variant="h5">Hit me up:</Typography>
+      <br />
+      <Box display="flex" flexDirection="row" alignItems="center">
+        <IconButton
+          aria-label="LinkedIn"
+          target="_blank"
+          href="https://www.linkedin.com/in/yuxiangd/"
+        >
+          <SubdirectoryArrowRightIcon fontSize="medium" />
+          <LinkedInIcon fontSize="large" />
+          <Typography sx={textStyle} variant="h6">
+            LinkedIn
+          </Typography>
+        </IconButton>
+      </Box>
 
-      <IconButton
-        aria-label="LinkedIn"
-        target="_blank"
-        href="https://www.linkedin.com/in/yuxiangd/"
-      >
-        <LinkedInIcon fontSize="large" />
-      </IconButton>
       <IconButton
         aria-label="Email"
         target="_blank"
         href="mailto:yuxiang.dong@stonybrook.edu"
       >
+        <SubdirectoryArrowRightIcon fontSize="medium" />
         <EmailIcon fontSize="large" />
+        <Typography sx={textStyle} variant="h6">
+          Email
+        </Typography>
       </IconButton>
+
       <IconButton
         aria-label="GitHub"
         target="_blank"
         href="https://github.com/naxy-dong"
       >
+        <SubdirectoryArrowRightIcon fontSize="medium" />
         <GitHubIcon fontSize="large" />
+        <Typography sx={textStyle} variant="h6">
+          Github
+        </Typography>
       </IconButton>
+
       <IconButton
         aria-label="Discord"
         target="_blank"
         href="https://discordapp.com/users/539630761947693076"
-        style={{ width: "51px", height: "51px" }}
       >
-        <FontAwesomeIcon icon={faDiscord} />
+        <SubdirectoryArrowRightIcon fontSize="medium" />
+        <FontAwesomeIcon
+          style={{ width: "35px", height: "35px" }}
+          icon={faDiscord}
+        />
+        <Typography sx={textStyle} variant="h6">
+          Discord
+        </Typography>
       </IconButton>
-    </>
+    </Box>
   );
 }
 

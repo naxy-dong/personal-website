@@ -165,7 +165,7 @@ const courses = [
       id: 15,
       title: "CSE 320 - Systems Fundamentals II",
       description:
-        "This course introduces C programming and essential concepts of operating systems, concurrency, and performance analysis, focused around several cross-cutting examples, such as memory management, error handling, and threaded programming. In this course, operating systems concepts are considered from the point of view of the application programmer, and the focus is on APIs for interacting with an operating system. A companion course, CSE 306, considers operating systems from the point of view of the OS kernel implementer.",
+        "This course introduces C programming and essential concepts of operating systems, concurrency, and performance analysis, focused around several cross-cutting examples, such as memory management, error handling, and threaded programming. In this course, operating systems concepts are considered from the point of view of the application programmer, and the focus is on APIs for interacting with an operating system.",
       supplements: [
         {
           label: "HW1 - Diff Patch Applier",
@@ -184,7 +184,7 @@ const courses = [
           link: "https://github.com/naxy-dong/System-Fundamental-2/tree/main/homework_submission/cse320/hw_feedback/hw4",
         },
         {
-          label: "HW5 - MultiThreaded-Tic-Tac-Toe-Server",
+          label: "HW5 - Multithreaded Tic Tac Toe Server",
           link: "https://github.com/naxy-dong/MultiThreaded-Tic-Tac-Toe-Server",
         },
       ],
