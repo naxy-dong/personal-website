@@ -16,6 +16,9 @@ const blogData = [
         ${makeParagraph(
           `when I first start making this project. I have a rough idea of what to put in each section. However, I really don't know what to put in the AboutMe page. This really got me thinking about the design and the color scheme of the website.`
         )}
+        ${makeParagraph(
+          `Taking "inspirations" from other people (God I love this quote). `
+        )}
         `;
 
       return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;

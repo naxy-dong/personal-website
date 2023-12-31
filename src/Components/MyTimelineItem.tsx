@@ -4,23 +4,35 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { Typography } from "@mui/material";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 
-function MyTimeline({title, description}: {title: string, description: string}) {
+function MyTimeline({
+  title,
+  date,
+  description,
+  isEnd,
+}: {
+  title: string;
+  date: string;
+  description: string;
+  isEnd?: boolean;
+}) {
   return (
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot variant="outlined" color="primary" />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Typography variant="h6" component="span">
-            {title}
-          </Typography>
-          <Typography color="textSecondary">
-            {description}
-          </Typography>
-        </TimelineContent>
-      </TimelineItem>
+    <TimelineItem>
+      <TimelineOppositeContent color="text.secondary">
+        {date}
+      </TimelineOppositeContent>
+      <TimelineSeparator>
+        <TimelineDot variant="outlined" color="primary" />
+        {!isEnd && <TimelineConnector />}
+      </TimelineSeparator>
+      <TimelineContent>
+        <Typography variant="h6" component="span">
+          {title}
+        </Typography>
+        <Typography color="textSecondary">{description}</Typography>
+      </TimelineContent>
+    </TimelineItem>
   );
 }
 
