@@ -33,7 +33,7 @@ function Courses() {
 
   return (
     <>
-      <Typography variant="caption" style={{ color: "salmon" }}>
+      <Typography variant="caption" sx={{ color: "error.main" }}>
         *** Please note that some repositories are marked as private to prevent
         other people from committing academic dishonesty.
       </Typography>

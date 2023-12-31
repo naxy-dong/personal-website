@@ -9,7 +9,7 @@ const assetPath = "src/assets/";
 
 const blogData = [
   {
-    title: "Speedy progress",
+    title: "The color issues.",
     date: new Date(2023, 11, 30),
     content: () => {
       const htmlContent = `
@@ -25,10 +25,6 @@ const blogData = [
     title: "AHHHH MY EYES",
     date: new Date(2023, 11, 30),
     content: () => {
-      const useMemoLink = makeLink(
-        "useMemo",
-        "https://react.dev/reference/react/useMemo"
-      );
       const modeLink = makeLink(
         "dark/light mode",
         "https://mui.com/material-ui/customization/dark-mode/"
