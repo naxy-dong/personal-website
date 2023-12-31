@@ -5,7 +5,7 @@ function AboutMe() {
   return (
     <>
       <Typography variant="h6">
-        I'm your local software engineer. This is my personal journey
+        I'm your local software engineer. This is my journey containing personal lore.
       </Typography>
       <MyTimeline />
     </>
