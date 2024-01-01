@@ -1,4 +1,5 @@
-import { Paper, Typography, styled, useTheme } from "@mui/material";
+import { Box, Paper, Typography, styled, useTheme } from "@mui/material";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 const BlogPaper = styled(Paper)(({ theme }) => ({
   textAlign: "left",
@@ -23,13 +24,16 @@ function BlogItem({
   return (
     <BlogPaper elevation={5}>
       <Typography variant="h4">{index + ". " + title}</Typography>
-      <Typography
-        variant="caption"
-        sx={{ color: "text.disabled", fontStyle: "italic" }}
-      >
-        {date.toDateString()}
-      </Typography>
-      <div>{content()}</div>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <CalendarMonthIcon fontSize="small"/>
+        <Typography
+          variant="caption"
+          sx={{ color: "text.disabled", fontStyle: "italic", marginLeft: 1 }}
+        >
+          {date.toDateString()}
+        </Typography>
+      </Box>
+      <Box>{content()}</Box>
       <hr style={{ borderColor: theme.palette.divider }} />
     </BlogPaper>
   );

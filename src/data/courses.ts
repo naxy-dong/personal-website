@@ -149,7 +149,7 @@ const courses = [
       description: `Teaching Assistant for CSE 214. Duties included 
       •	Prepared recitation materials and taught core data structure concepts in Java to a recitation of 27 students.
       •	Held office hours (5 hours weekly) to assist the students with homework and curriculum.
-      •	Prepared and entered homework test cases in the CodeGrade auto-grading system
+      •	Prepared and entered homework test cases in the CodeGrade auto-grading system.
       `,
     },
     {

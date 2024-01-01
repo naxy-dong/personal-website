@@ -12,12 +12,51 @@ const blogData = [
     title: "The color issues.",
     date: new Date(2023, 11, 30),
     content: () => {
+      const blogTodoList = makeList(
+        [
+          "markdown to HTML converter",
+          "code block",
+          "Before and after image slider",
+          "A compact mode to avoid scrolling",
+        ],
+        "Blog Page",
+        true
+      );
+      const coursesTodoList = makeList(
+        [
+          "a tag filtering system?",
+          "icons for any programming languaged used in the course",
+        ],
+        "Courses Page",
+        true
+      );
+
       const htmlContent = `
         ${makeParagraph(
-          `when I first start making this project. I have a rough idea of what to put in each section. However, I really don't know what to put in the AboutMe page. This really got me thinking about the design and the color scheme of the website.`
+          `When I first start making this project, I have a rough idea of what to put in each section. However, I really don't know what to put in the AboutMe page and the home page. After Taking "inspirations" from other people (God I love this quote). I've decided to do a timeline of my journey to the about me page. And the image below is how it turned out.`
+        )}
+        ${makeImage(
+          assetPath + "day4-1.png",
+          "Timeline of my journey on the aboutMe page.",
+          "Timeline of my journey on the aboutMe page."
         )}
         ${makeParagraph(
-          `Taking "inspirations" from other people (God I love this quote). `
+          `I've also added more icons and added some useless content for my contact page. Check this out!`
+        )}
+        ${makeImage(
+          assetPath + "day4-2.png",
+          "This is my contact page on day 4.",
+          "This is my contact page on day 4."
+        )}
+        ${makeList(
+          [
+            "Home page - what to put there? So far I would like to put all my featured work and highlights.",
+            coursesTodoList,
+            blogTodoList,
+            "Website color scheme",
+            "CV - Should I post it or not?",
+          ],
+          "Here's my todo list & series of questions to answer"
         )}
         `;
 

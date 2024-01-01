@@ -7,10 +7,19 @@ function makeParagraph(text: string) {
   return `<p>${text}</p>`;
 }
 
-function makeList(items: any[], title?: string) {
+function makeList(items: any[], title?: string, ordered?: boolean) {
   return `
     ${title ? `<span>${title}</span>` : ""}
-    <ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>
+    ${ordered ? "<ol>" : "<ul>"} 
+    ${items
+      .map((item) => {
+        if(item.startsWith("<")){
+          return item;
+        }
+        return `<li>${item}</li>`;
+      })
+      .join("")}
+    ${ordered ? "</ol>" : "</ul>"}
   `;
 }
 
