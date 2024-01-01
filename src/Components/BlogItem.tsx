@@ -24,8 +24,8 @@ function BlogItem({
   return (
     <BlogPaper elevation={5}>
       <Typography variant="h4">{index + ". " + title}</Typography>
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <CalendarMonthIcon fontSize="small"/>
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <CalendarMonthIcon fontSize="small" />
         <Typography
           variant="caption"
           sx={{ color: "text.disabled", fontStyle: "italic", marginLeft: 1 }}
