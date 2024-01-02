@@ -19,12 +19,16 @@ function CourseItemWithSupplements({
   return (
     <Grid container>
       <Grid item sx={leftItemStyle} sm={12} md={9}>
-        <CourseItem title={title} description={description} languages={languages} />
+        <CourseItem
+          title={title}
+          description={description}
+          languages={languages}
+        />
       </Grid>
       <Grid item sm={12} md={3}>
         <Box>
-          {supplements?.map((supplement) => (
-            <Supplement key={supplement.label} {...supplement} />
+          {supplements?.map((supplement, index) => (
+            <Supplement key={index} {...supplement} />
           ))}
         </Box>
       </Grid>

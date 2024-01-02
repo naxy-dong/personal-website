@@ -62,8 +62,6 @@ function languageToIcon(language: string) {
       break;
   }
 
-  // icon.props.size=iconSizeAfter;
-
   return icon;
 }
 

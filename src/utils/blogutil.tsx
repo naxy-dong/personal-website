@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function BlogParagraph({ children }: { children: React.ReactNode }) {
   return <p>{children}</p>;
 }
@@ -30,9 +32,9 @@ function BlogOrderedList({ items, title }: { items: any[]; title?: string }) {
 
 function BlogLink({ text, url }: { text: string; url: string }) {
   return (
-    <a target="_blank" className="blog-link" href={url}>
+    <Link target="_blank" className="blog-link" to={url}>
       <strong>{text}</strong>
-    </a>
+    </Link>
   );
 }
 
