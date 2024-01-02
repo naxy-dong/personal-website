@@ -10,8 +10,28 @@ const assetPath = "src/assets/";
 
 const blogData = [
   {
-    title: "The color issues.",
-    date: new Date(2023, 11, 30),
+    title: "More icons!",
+    date: new Date(2024, 0, 1),
+    content: () => {
+      return (
+        <>
+          <BlogParagraph>
+            Just a quick one for the new years. I added icons from the devicon
+            library for each courses that contains any programming languages
+            I've used in the course.
+          </BlogParagraph>
+          <BlogImage
+            src={assetPath + "day5-1.png"}
+            alt="Icons in the courses page."
+            caption="Icons in the courses page."
+          />
+        </>
+      );
+    },
+  },
+  {
+    title: "AboutMe page + icons.",
+    date: new Date(2023, 11, 31),
     content: () => {
       const blogTodoList = (
         <BlogOrderedList
