@@ -1,4 +1,13 @@
-import { Box, Tab, Tabs, Typography } from "@mui/material";
+import {
+  Box,
+  FormControlLabel,
+  FormGroup,
+  Grid,
+  Switch,
+  Tab,
+  Tabs,
+  Typography,
+} from "@mui/material";
 import React, { useState } from "react";
 import CourseList from "../Components/CourseList";
 
@@ -31,27 +40,55 @@ function Courses() {
     setValue(newValue);
   };
 
+  const [checked, setChecked] = React.useState(true);
+  const handleCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
+  };
+
   return (
     <>
       <Typography variant="caption" sx={{ color: "error.main" }}>
         *** Please note that some repositories are marked as private to prevent
         other people from committing academic dishonesty.
       </Typography>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="tabs for semester selection"
-          centered
-        >
-          <Tab label="Fall 2021" {...a11yProps(0)} />
-          <Tab label="Spring 2022" {...a11yProps(1)} />
-          <Tab label="Fall 2022" {...a11yProps(2)} />
-          <Tab label="Spring 2023" {...a11yProps(3)} />
-          <Tab label="Fall 2023" {...a11yProps(4)} />
-          <Tab label="Spring 2024" {...a11yProps(5)} />
-        </Tabs>
-      </Box>
+
+      <Grid
+        container
+        sx={{ borderBottom: 1, borderColor: "divider", alignItems: "center" }}
+      >
+        <Grid item xs></Grid>
+        <Grid item xs={8}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="tabs for semester selection"
+            centered
+          >
+            <Tab label="Fall 2021" {...a11yProps(0)} />
+            <Tab label="Spring 2022" {...a11yProps(1)} />
+            <Tab label="Fall 2022" {...a11yProps(2)} />
+            <Tab label="Spring 2023" {...a11yProps(3)} />
+            <Tab label="Fall 2023" {...a11yProps(4)} />
+            <Tab label="Spring 2024" {...a11yProps(5)} />
+          </Tabs>
+        </Grid>
+        <Grid item xs>
+          <FormGroup>
+            <FormControlLabel
+              sx={{ flexDirection: "row-reverse" }}
+              control={
+                <Switch
+                  checked={checked}
+                  onChange={handleCheck}
+                  size="small"
+                  inputProps={{ "aria-label": "controlled" }}
+                />
+              }
+              label="Collapsed"
+            />
+          </FormGroup>
+        </Grid>
+      </Grid>
       <CustomTabPanel value={value} index={value}>
         <CourseList index={value} />
       </CustomTabPanel>

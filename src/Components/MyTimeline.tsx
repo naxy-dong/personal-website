@@ -1,26 +1,25 @@
 import Timeline from "@mui/lab/Timeline";
 import MyTimelineItem from "./MyTimelineItem";
 
+const timelineStyle = {
+  "& .MuiTimelineContent-root": {
+    bgcolor: "action.disabledBackground",
+    textAlign: "justify !important",
+  },
+  "& .MuiTimelineContent-root, & .MuiTimelineOppositeContent-root": {
+    borderRadius: 4,
+    padding: 3,
+    margin: "0 20px",
+  },
+};
+
 function MyTimeline() {
   return (
-    <Timeline
-      position="alternate"
-      sx={{
-        "& .MuiTimelineContent-root": {
-          bgcolor: "action.disabledBackground",
-          textAlign: "justify !important",
-        },
-        "& .MuiTimelineContent-root, & .MuiTimelineOppositeContent-root": {
-          borderRadius: 4,
-          padding: 3,
-          margin: "0 20px",
-        },
-      }}
-    >
+    <Timeline position="alternate" sx={timelineStyle}>
       <MyTimelineItem
         title="The other side of the globe"
         date="Dec 2014"
-        description="I bid farewell to my elementary school friends, with whom I shared five years of memories, before I took the flight to immigrate from China to United States."
+        description="I took the flight to immigrate from China to United States."
       />
       <MyTimelineItem
         title="Brooklyn Technical High School"
@@ -61,6 +60,11 @@ function MyTimeline() {
         title="West Palm Test Prep"
         date="Sep 2023 - Present"
         description="I am currently working as a front-end developer at West Palm Test Prep developing a website for taking the online SAT."
+      />
+      <MyTimelineItem
+        title="PragSec Lab Research Assistant"
+        date="Jan 2023 - Present"
+        description="I'm currently a research assistant for the PragSec lab working on the content integrity project."
       />
       <MyTimelineItem
         title="Now"

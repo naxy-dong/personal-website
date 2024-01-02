@@ -1,6 +1,8 @@
 // Interestin fact(Semester 1). I skipped calc bc by answer 9 question
 // Interesting fact(Semester 2). I was late for CSE 301 final exam by 30mins (out of 1 hour 30 minute exam) and barely squeezed an letter grade of A.
 
+// Next available id: 33
+
 const courses = [
   // index: 0 - Fall 2021
   [
@@ -161,6 +163,18 @@ const courses = [
       title: "PHY 132 & 134 - Physics II & Lab",
       description:
         "Second part of a two-semester physics sequence for physical-sciences or engineering majors who have a strong mathematics background and are ready for a fast learning pace. It covers electromagnetism, electric circuit theory, and optics.",
+    },
+    {
+      id: 32,
+      title: "MUS 268: Spirit of Stony Brook Athletic Band",
+      description:
+        "The study and playing/marching performance of music from the marching and pep band repertoire. The course requires attendance at a preseason marching band camp prior to the beginning of the Fall term (typically one week prior). Attendance at select athletic games and some away games is also required (including some Saturdays and some evenings, outside of course meeting times).",
+        supplements: [
+          {
+            label: "Annual Spring 2022 Concert link",
+            link: "https://www.youtube.com/watch?v=BF2vbKMW3os"
+          },
+        ],
     },
   ],
   // index: 3 - Spring 2023

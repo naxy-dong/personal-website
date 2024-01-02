@@ -201,3 +201,15 @@ import { faCss3 } from "@fortawesome/free-brands-svg-icons";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 const iconStyle = { width: "25px", height: "25px" };
 ```
+
+```js
+<Grid container spacing={3}>
+            <Grid item xs></Grid>
+            <Grid item xs={8}>
+            </Grid>
+            <Grid item xs>
+              <Box>
+              </Box>
+            </Grid>
+          </Grid>
+```

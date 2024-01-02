@@ -65,4 +65,6 @@ function languageToIcon(language: string) {
   return icon;
 }
 
+// function onlyProgrammingLanguages
+
 export { languageToIcon };
