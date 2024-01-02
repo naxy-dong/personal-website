@@ -5,10 +5,11 @@ const courses = [
   // index: 0 - Fall 2021
   [
     {
-      id: 1,
-      title: "CSE 215 - Discrete Mathematics",
+      id: 4,
+      title: "AMS 310 - Probability Theory",
       description:
-        "Introduction to the logical and mathematical foundations of computer science. Topics include functions, relations, and sets; recursion; elementary logic; and mathematical induction and other proof techniques.",
+        "A survey of data analysis, probability theory, and statistics. Stem and leaf displays, box plots, schematic plots, fitting straight line relationships, discrete and continuous probability distributions, conditional distributions, binomial distribution, normal and t distributions, confidence intervals, and significance tests.",
+      languages: ["R"],
     },
     {
       id: 2,
@@ -23,16 +24,16 @@ const courses = [
       ],
     },
     {
+      id: 1,
+      title: "CSE 215 - Discrete Mathematics",
+      description:
+        "Introduction to the logical and mathematical foundations of computer science. Topics include functions, relations, and sets; recursion; elementary logic; and mathematical induction and other proof techniques.",
+    },
+    {
       id: 3,
       title: "AMS 210 - Applied Linear Algebra",
       description:
         "An introduction to the theory and use of vectors and matrices. Matrix theory including systems of linear equations. Theory of Euclidean and abstract vector spaces. Eigenvectors and eigenvalues. Linear transformations.",
-    },
-    {
-      id: 4,
-      title: "AMS 310 - Probability Theory",
-      description:
-        "A survey of data analysis, probability theory, and statistics. Stem and leaf displays, box plots, schematic plots, fitting straight line relationships, discrete and continuous probability distributions, conditional distributions, binomial distribution, normal and t distributions, confidence intervals, and significance tests.",
     },
     {
       id: 5,
@@ -72,6 +73,7 @@ const courses = [
           link: "https://github.com/naxy-dong/Data-Structure-2021/tree/main/4.flight-simulator",
         },
       ],
+      languages: ["Java"],
     },
     {
       id: 8,
@@ -118,6 +120,7 @@ const courses = [
           link: "https://github.com/naxy-dong/Programming-Abstractions/tree/main/4.iterable-BST",
         },
       ],
+      languages: ["Java", "Python"],
     },
     {
       id: 12,
@@ -142,6 +145,7 @@ const courses = [
           link: "https://github.com/naxy-dong/System-Fundamentals-1/tree/main/4.social-network",
         },
       ],
+      languages: ["C"],
     },
     {
       id: 13,
@@ -188,6 +192,7 @@ const courses = [
           link: "https://github.com/naxy-dong/MultiThreaded-Tic-Tac-Toe-Server",
         },
       ],
+      languages: ["C"],
     },
     {
       id: 16,
@@ -208,17 +213,10 @@ const courses = [
           link: "https://github.com/naxy-dong/Computer-Networks/tree/main/Dong-Yuxiang-assignment3",
         },
       ],
+      languages: ["Python"],
     },
     {
       id: 17,
-      title: "CSE 475(CSE 216 TA) - Teaching Curriculum",
-      description: `Teaching Assistant for CSE 216, duties included
-      •	Lead two one-hour-long recitations weekly consisting of a total of 57 students and cover topics involving OCaml, Java, and Python.
-      •	Hold office hours (3 hours weekly) and conduct review sessions before the exam to ensure student success.
-      `,
-    },
-    {
-      id: 18,
       title: "VIP 295 - Vertical Integrated Projects",
       description:
         "The goal of this project is to explore engineering design through robotics. Students on this project will work on a range of robotics technology, such as autonomous control, mechanism design, microcontroller programming, and machine learning to establish successful models for implementation in my research. The outcomes will be implemented in a range of classes as well as in SBU and CEWIT Hackathons, workshops for K-12 students, and in informal learning environments, such as Makerspaces, libraries, and STEM museums.",
@@ -232,6 +230,15 @@ const courses = [
           link: "https://drive.google.com/file/d/1fEsNDzgb50LCXs9Cv9o3LnqBjDKqGPBm/view?usp=sharing",
         },
       ],
+      languages: ["Arduino"],
+    },
+    {
+      id: 18,
+      title: "CSE 475(CSE 216 TA) - Teaching Curriculum",
+      description: `Teaching Assistant for CSE 216, duties included
+      •	Lead two one-hour-long recitations weekly consisting of a total of 57 students and cover topics involving OCaml, Java, and Python.
+      •	Hold office hours (3 hours weekly) and conduct review sessions before the exam to ensure student success.
+      `,
     },
     {
       id: 19,
@@ -275,6 +282,7 @@ const courses = [
           link: "https://github.com/naxy-dong/Theory-Of-Database-Systems/tree/main/5.DBLP-XML-Queries",
         },
       ],
+      languages: ["SQL", "Java", "Python"],
     },
     {
       id: 22,
@@ -287,6 +295,7 @@ const courses = [
           link: "https://github.com/sbu-ckane-f23-cse316-projectorg/projectfakeso-top-of-the-merning",
         },
       ],
+      languages: ["HTML", "CSS", "JavaScript", "React", "Node", "MongoDB"],
     },
     {
       id: 23,
@@ -315,6 +324,7 @@ const courses = [
           link: "https://github.com/naxy-dong/Operating-System/tree/main/5.s2fs",
         },
       ],
+      languages: ["C"],
     },
     {
       id: 24,

@@ -31,6 +31,7 @@ const blogData = [
             "a tag filtering system?",
             "A compact mode to avoid scrolling",
             "icons for any programming language used in the course",
+            "Fix the TA section",
           ]}
           title="Courses Page"
         />

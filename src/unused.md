@@ -189,3 +189,15 @@ export default function ToggleColorMode() {
   </TimelineItem>
 </Timeline>
 ```
+
+```js
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPython } from "@fortawesome/free-brands-svg-icons";
+import { faJs } from "@fortawesome/free-brands-svg-icons";
+import { faJava } from "@fortawesome/free-brands-svg-icons";
+import { faCuttlefish } from "@fortawesome/free-brands-svg-icons";
+import { faFontAwesome } from "@fortawesome/free-brands-svg-icons";
+import { faCss3 } from "@fortawesome/free-brands-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
+const iconStyle = { width: "25px", height: "25px" };
+```

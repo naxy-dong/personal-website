@@ -18,9 +18,14 @@ function CourseList({ index }: { index: number }) {
           title={course.title}
           description={course.description}
           supplements={course.supplements}
+          languages={course.languages}
         />
       ) : (
-        <CourseItem title={course.title} description={course.description} />
+        <CourseItem
+          title={course.title}
+          description={course.description}
+          languages={course.languages}
+        />
       )}
     </Paper>
   ));
