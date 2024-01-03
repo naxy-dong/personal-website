@@ -59,6 +59,8 @@ function Courses() {
         <Grid item xs></Grid>
         <Grid item xs={8}>
           <Tabs
+            orientation="horizontal"
+            variant="scrollable"
             value={value}
             onChange={handleChange}
             aria-label="tabs for semester selection"
@@ -84,13 +86,13 @@ function Courses() {
                   inputProps={{ "aria-label": "controlled" }}
                 />
               }
-              label="Collapsed"
+              label="Collapse All"
             />
           </FormGroup>
         </Grid>
       </Grid>
       <CustomTabPanel value={value} index={value}>
-        <CourseList index={value} />
+        <CourseList index={value} isCollapsed={checked} />
       </CustomTabPanel>
     </>
   );

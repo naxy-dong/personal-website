@@ -3,7 +3,7 @@
 
 // Next available id: 33
 
-const courses = [
+const courses: Course[][] = [
   // index: 0 - Fall 2021
   [
     {
@@ -169,12 +169,12 @@ const courses = [
       title: "MUS 268: Spirit of Stony Brook Athletic Band",
       description:
         "The study and playing/marching performance of music from the marching and pep band repertoire. The course requires attendance at a preseason marching band camp prior to the beginning of the Fall term (typically one week prior). Attendance at select athletic games and some away games is also required (including some Saturdays and some evenings, outside of course meeting times).",
-        supplements: [
-          {
-            label: "Annual Spring 2022 Concert link",
-            link: "https://www.youtube.com/watch?v=BF2vbKMW3os"
-          },
-        ],
+      supplements: [
+        {
+          label: "Annual Spring 2022 Concert link",
+          link: "https://www.youtube.com/watch?v=BF2vbKMW3os",
+        },
+      ],
     },
   ],
   // index: 3 - Spring 2023

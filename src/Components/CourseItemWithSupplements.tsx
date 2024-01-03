@@ -13,7 +13,7 @@ function CourseItemWithSupplements({
 }: {
   title: string;
   description: string;
-  supplements?: { label: string; link: string }[];
+  supplements?: Supplement[];
   languages?: string[];
 }) {
   return (

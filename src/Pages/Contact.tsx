@@ -1,18 +1,34 @@
 import { Box, Grid, Typography } from "@mui/material";
 import Socials from "../Components/Socials";
 
+const ContactPageStyle = { height: "100vh" };
+
 function Contact() {
   return (
-    <Grid container spacing={3} alignItems="center">
+    <Grid container alignItems="center" sx={ContactPageStyle}>
       <Grid item sm={12} md={6}>
-        <Box display="flex" flexDirection="column" alignItems="flex-start">
+        <Box display="flex" flexDirection="column" alignItems="center">
           <Typography variant="h5">Hit me up on:</Typography>
           <br />
-          <Socials />
+          <Box display="flex" flexDirection="column" alignItems="flex-start">
+            <Socials />
+          </Box>
         </Box>
       </Grid>
-      <Grid item sm={12} md={6} container justifyContent="center" style={{ height: '100%' }}>
-        <Box display="flex" flexDirection="column" alignItems="flex-start">
+      <Grid
+        item
+        sm={12}
+        md={6}
+        container
+        justifyContent="center"
+        style={{ height: "100%" }}
+      >
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          sx={{ padding: 4 }}
+        >
           <Typography variant="h5">
             This website is made with <s>love</s> boredom in the winter of 2023
           </Typography>
