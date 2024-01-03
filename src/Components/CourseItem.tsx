@@ -6,14 +6,16 @@ function CourseItem({
   title,
   description,
   languages,
+  wantTitle,
 }: {
   title: string;
   description: string;
   languages?: string[];
+  wantTitle?: boolean;
 }) {
   return (
     <Box>
-      <CourseTitle title={title} languages={languages} />
+      {wantTitle && <CourseTitle title={title} languages={languages} />}
       <Typography
         variant="subtitle1"
         paragraph

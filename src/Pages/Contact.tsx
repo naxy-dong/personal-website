@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import Socials from "../Components/Socials";
 
-const ContactPageStyle = { height: "100vh" };
+const ContactPageStyle = { height: "calc(100vh - 4rem); " };
 
 function Contact() {
   return (

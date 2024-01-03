@@ -40,7 +40,7 @@ function Courses() {
     setValue(newValue);
   };
 
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState(false);
   const handleCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
   };
@@ -64,7 +64,6 @@ function Courses() {
             value={value}
             onChange={handleChange}
             aria-label="tabs for semester selection"
-            centered
           >
             <Tab label="Fall 2021" {...a11yProps(0)} />
             <Tab label="Spring 2022" {...a11yProps(1)} />
