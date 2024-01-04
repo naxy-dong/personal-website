@@ -1,3 +1,4 @@
+import Blog from "../Pages/Blog";
 import {
   BlogParagraph,
   BlogUnorderedList,
@@ -9,6 +10,73 @@ import {
 const assetPath = "src/assets/";
 
 const blogData = [
+  {
+    title: "Image slider?",
+    date: new Date(2024, 0, 3),
+    content: () => {
+      const imageSliderLink = (
+        <BlogLink
+          text="image slider"
+          url="https://taiji-game.com/2022/02/18/83-in-the-final-stretch/"
+        />
+      );
+      return <></>;
+    },
+  },
+  {
+    title: "Making the website more responsive",
+    date: new Date(2024, 0, 3),
+    content: () => {
+      return (
+        <>
+          <BlogParagraph>
+            Making the website responsive is such a "pain in the A". You don't
+            know how bad your website looks like until you change the dimension
+            of the website. So, that's what I try to fix for the past two days.
+          </BlogParagraph>
+          <BlogParagraph>
+            The change took the most place on the navbar, courses page and the
+            contact page. This include:
+          </BlogParagraph>
+          <BlogUnorderedList
+            items={[
+              "Adding a drawer to the navbar. (HUGE!!)",
+              "Hiding the collapsed button in the courses page as the screen size gets smaller.",
+              "Making sure that the elements are displayed in the center in the contact page as the screen size gets smaller.",
+            ]}
+          />
+          <BlogImage
+            src={assetPath + "day7-1.png"}
+            alt="Navbar Drawer."
+            caption="Website after clicking on the navbar drawer."
+          />
+          <BlogParagraph>
+            I should also think about having a compact mode the timeline.
+            Alternate format for the timeline really doesn't work well on mobile
+            as each item only takes up half of the width of the screen.
+          </BlogParagraph>
+          <BlogParagraph>
+            So far the progress of the project has been pretty good. I'm excited
+            to approach 2000 lines of code!
+          </BlogParagraph>
+          <BlogImage
+            src={assetPath + "day7-2.png"}
+            alt="Line count for the projects."
+            caption="Line count for the projects. As you can see, the data for the blog and courses and the navbar has substantial number lines. This means I would need to think about refactoring the navbar and the drawer into their own files."
+          />
+          <BlogParagraph>
+            I think that's all I want to do for the course page and the nav bar
+            for now. I will think about to make the homework link in the course
+            page a little nicer later on the road.
+          </BlogParagraph>
+          <BlogParagraph>
+            Next up I would like to focus on the blog page and add more
+            functionality that improves the quality of my blog.
+          </BlogParagraph>
+        </>
+      );
+    },
+  },
   {
     title: "More icons!",
     date: new Date(2024, 0, 1),
