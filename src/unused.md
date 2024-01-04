@@ -1,5 +1,7 @@
 Unused code that might come in handly later
 
+find . -name '*' | grep -vE '/assets/|unused.md' | xargs wc -l | sort -n
+
 NavBar.js
 ```js
           <StyledLink to="/">
@@ -204,14 +206,14 @@ const iconStyle = { width: "25px", height: "25px" };
 
 ```js
 <Grid container>
-            <Grid item xs></Grid>
-            <Grid item xs={8}>
-            </Grid>
-            <Grid item xs>
-              <Box>
-              </Box>
-            </Grid>
-          </Grid>
+  <Grid item xs></Grid>
+  <Grid item xs={8}>
+  </Grid>
+  <Grid item xs>
+    <Box>
+    </Box>
+  </Grid>
+</Grid>
 ```
 
 
