@@ -46,12 +46,20 @@ const navContainerStyles = {
 };
 
 function Navbar() {
+  // Themes and color
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
 
+  // Responsive navbar & drawer
   const drawerWidth = 240;
-  const navItems = ["Home", "About", "Contact"];
-
+  const navItems = [
+    ["Home", "/"],
+    ["About", "/AboutMe"],
+    ["Courses", "/Courses"],
+    ["Blog", "/Blog"],
+    ["Contact", "/Contact"],
+    ["CV", "https://google.com"],
+  ];
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -61,14 +69,18 @@ function Navbar() {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        My Website
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton
+              component={Link}
+              to={item[1]}
+              sx={{ textAlign: "center" }}
+            >
+              <ListItemText primary={item[0]} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -108,35 +120,19 @@ function Navbar() {
               sx={{ display: { xs: "none", sm: "none", md: "block" } }}
             >
               <Box>
-                <StyledLink to="/">
-                  <Typography variant="h6">Home</Typography>
-                </StyledLink>
-
-                <StyledLink to="/AboutMe">
-                  <Typography variant="h6">About me</Typography>
-                </StyledLink>
-
-                <StyledLink to="/Courses">
-                  <Typography variant="h6">Courses</Typography>
-                </StyledLink>
-
-                <StyledLink to="/Blog">
-                  <Typography variant="h6">Blog</Typography>
-                </StyledLink>
-
-                <StyledLink to="/Contact">
-                  <Typography variant="h6">Contact</Typography>
-                </StyledLink>
-
-                <StyledLink target="_blank" to="https://google.com">
-                  <Typography variant="h6">CV</Typography>
-                </StyledLink>
+                {navItems.map((item, index) => (
+                  <React.Fragment key={index}>
+                    <StyledLink to={item[1]}>
+                      <Typography variant="h6">{item[0]}</Typography>
+                    </StyledLink>
+                  </React.Fragment>
+                ))}
               </Box>
             </Grid>
             <Grid item xs>
               <Box
                 sx={{
-                  display: "flex",
+                  display: { xs: "none", sm: "flex" },
                   height: "100%",
                   width: "100%",
                   alignItems: "center",
