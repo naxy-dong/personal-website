@@ -64,6 +64,7 @@ function Courses() {
             value={value}
             onChange={handleChange}
             aria-label="tabs for semester selection"
+            sx={{ justifyContent: "center" }}
           >
             <Tab label="Fall 2021" {...a11yProps(0)} />
             <Tab label="Spring 2022" {...a11yProps(1)} />
@@ -74,7 +75,7 @@ function Courses() {
           </Tabs>
         </Grid>
         <Grid item xs>
-          <FormGroup>
+          <FormGroup sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
             <FormControlLabel
               sx={{ flexDirection: "row-reverse" }}
               control={

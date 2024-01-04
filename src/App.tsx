@@ -9,8 +9,7 @@ import Contact from "./Pages/Contact";
 import Courses from "./Pages/Courses";
 import { ThemeProvider, createTheme } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
-
-const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+import ColorModeContext from "./hooks/ColorModeContext";
 
 function App() {
   const [mode, setMode] = React.useState<"light" | "dark">("dark");
@@ -50,4 +49,4 @@ function App() {
   );
 }
 
-export { App, ColorModeContext };
+export { App };
