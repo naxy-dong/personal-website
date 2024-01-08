@@ -151,11 +151,10 @@ const courses: Course[][] = [
     },
     {
       id: 13,
-      title: "CSE 475(CSE 214 TA) - Teaching Curriculum",
-      description: `Teaching Assistant for CSE 214. Duties included 
-      •	Prepared recitation materials and taught core data structure concepts in Java to a recitation of 27 students.
-      •	Held office hours (5 hours weekly) to assist the students with homework and curriculum.
-      •	Prepared and entered homework test cases in the CodeGrade auto-grading system.
+      title: "CSE 475(CSE 214 TA) - Teaching Assistant",
+      description: `Teaching Assistant for CSE 214 under Professor Esmaili. Prepared recitation materials and taught 
+      core data structure concepts in Java to a recitation of 27 students. Held office hours (5 hours weekly)
+      to assist the students with homework and curriculum. Created homework test cases in the CodeGrade auto-grading system.
       `,
     },
     {
@@ -248,10 +247,10 @@ const courses: Course[][] = [
     },
     {
       id: 18,
-      title: "CSE 475(CSE 216 TA) - Teaching Curriculum",
-      description: `Teaching Assistant for CSE 216, duties included
-      •	Lead two one-hour-long recitations weekly consisting of a total of 57 students and cover topics involving OCaml, Java, and Python.
-      •	Hold office hours (3 hours weekly) and conduct review sessions before the exam to ensure student success.
+      title: "CSE 475(CSE 216 TA) - Teaching Assistant",
+      description: `Teaching Assistant for CSE 216 under Professor Banerjee. 
+      Led two one-hour-long recitations weekly consisting of a total of 57 students and cover topics involving OCaml, Java, and Python. 
+      Held office hours (3 hours weekly) and conducted review sessions before the exam to ensure student success.
       `,
     },
     {
@@ -365,7 +364,13 @@ const courses: Course[][] = [
       id: 27,
       title: "CSE 487 - Research",
       description:
-        "Research assistant for Professor Nick Nikiforakis working on the Content Integrity project. For more info: https://securitee.org/lab.html",
+        "Research assistant for Professor Nick Nikiforakis working on the Content Integrity project.",
+      supplements: [
+        {
+          label: "Learn more about the team",
+          link: "https://securitee.org/lab.html",
+        },
+      ],
     },
     {
       id: 28,

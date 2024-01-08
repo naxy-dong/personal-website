@@ -23,7 +23,6 @@ import ColorModeContext from "../hooks/ColorModeContext";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  margin-top: 2px;
   padding: 1rem;
   display: inline-block;
   color: white;
@@ -42,8 +41,10 @@ const navContainerStyles = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  // gap: '1rem',
 };
+
+const hideOnMobile = { xs: "none", sm: "none", md: "block" };
+const showOnMobile = { md: "none" };
 
 function Navbar() {
   // Themes and color
@@ -69,7 +70,7 @@ function Navbar() {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        My Website
+        Yuxiang Dong
       </Typography>
       <Divider />
       <List>
@@ -92,7 +93,7 @@ function Navbar() {
     <React.Fragment>
       <AppBar position="fixed" component="nav">
         <Toolbar style={navContainerStyles}>
-          <Grid container spacing={3}>
+          <Grid container>
             <Grid item xs>
               <Box
                 sx={{
@@ -108,17 +109,20 @@ function Navbar() {
                   aria-label="open drawer"
                   edge="start"
                   onClick={handleDrawerToggle}
-                  sx={{ mr: 2, display: { md: "none" } }}
+                  sx={{ display: showOnMobile }}
                 >
                   <MenuIcon />
                 </IconButton>
+                <Box sx={{ display: hideOnMobile }}>
+                  <StyledLink to="/">
+                    <Typography variant="h6" sx={{ whiteSpace: "nowrap" }}>
+                      Yuxiang Dong
+                    </Typography>
+                  </StyledLink>
+                </Box>
               </Box>
             </Grid>
-            <Grid
-              item
-              xs={8}
-              sx={{ display: { xs: "none", sm: "none", md: "block" } }}
-            >
+            <Grid item xs={8} sx={{ display: hideOnMobile }}>
               <Box>
                 {navItems.map((item, index) => (
                   <React.Fragment key={index}>
@@ -137,8 +141,7 @@ function Navbar() {
                   width: "100%",
                   alignItems: "center",
                   justifyContent: "flex-end",
-                  // bgcolor: "background.default",
-                  // color: "text.primary",
+                  whiteSpace: "nowrap",
                 }}
               >
                 {theme.palette.mode} mode
@@ -167,7 +170,7 @@ function Navbar() {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "block", md: "none" },
+            display: showOnMobile,
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,

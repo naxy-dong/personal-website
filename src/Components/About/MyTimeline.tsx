@@ -1,21 +1,57 @@
 import Timeline from "@mui/lab/Timeline";
 import MyTimelineItem from "./MyTimelineItem";
+import { useEffect, useState } from "react";
+import { useTheme } from "@mui/material/styles";
 
 const timelineStyle = {
   "& .MuiTimelineContent-root": {
     bgcolor: "action.disabledBackground",
     textAlign: "justify !important",
   },
-  "& .MuiTimelineContent-root, & .MuiTimelineOppositeContent-root": {
-    borderRadius: 4,
+  // Main content
+  "& .MuiTimelineContent-positionAlternate, & .MuiTimelineContent-positionRight":
+    {
+      borderRadius: 4,
+      padding: 3,
+      margin: "10px 20px",
+    },
+  // Opposite content (date)
+  "& .MuiTimelineOppositeContent-positionRight": {
+    flex: 0.2,
+  },
+  "& .MuiTimelineOppositeContent-positionAlternate": {
     padding: 3,
+    paddingTop: 1,
     margin: "0 20px",
   },
 };
 
 function MyTimeline() {
+  const theme = useTheme();
+  const mediumScreenBreakpoint = theme.breakpoints.values.md;
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    window.innerWidth <= mediumScreenBreakpoint
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= mediumScreenBreakpoint);
+    };
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // effect runs once after the initial render
+
   return (
-    <Timeline position="alternate" sx={timelineStyle}>
+    <Timeline
+      position={isSmallScreen ? "right" : "alternate"}
+      sx={timelineStyle}
+    >
       <MyTimelineItem
         title="The other side of the globe"
         date="Dec 2014"
