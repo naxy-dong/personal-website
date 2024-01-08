@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import BlogList from "../Components/BlogList";
+import BlogList from "../Components/Blog/BlogList";
 
 function Blog() {
   return (

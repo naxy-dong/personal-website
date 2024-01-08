@@ -1,4 +1,4 @@
-import blogData from "../data/blog";
+import blogData from "../../data/blog";
 import BlogItem from "./BlogItem";
 import { Container } from "@mui/material";
 

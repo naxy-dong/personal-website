@@ -6,6 +6,7 @@ find . -name '*' | grep -vE '/gradle/gradlew' | xargs wc -l | sort -n
 frontend
 find . -name '*' | grep -vE '/Components/Test' | xargs wc -l | sort -n
 
+This project
 find . -name '*' | grep -vE '/assets/|unused.md' | xargs wc -l | sort -n
 
 NavBar.js

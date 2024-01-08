@@ -1,6 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { AccordionProps } from "@mui/material/Accordion";
-import courses from "../data/courses";
+import courses from "../../data/courses";
 import BaseCourseItem from "./BaseCourseItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CourseTitle from "./CourseTitle";

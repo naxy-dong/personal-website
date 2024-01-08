@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { languageToIcon } from "../utils/coursesutil";
+import { languageToIcon } from "../../utils/coursesutil";
 
 function CourseTitle({
   title,

@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import MyTimeline from "../Components/MyTimeline";
+import MyTimeline from "../Components/About/MyTimeline";
 
 function AboutMe() {
   return (

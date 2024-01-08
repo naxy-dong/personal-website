@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import CourseList from "../Components/CourseList";
+import CourseList from "../Components/Courses/CourseList";
 
 function CustomTabPanel(props: any) {
   const { children, value, index, ...other } = props;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Highlight, themes } from "prism-react-renderer";
-import { Pre, Line, LineNo, LineContent } from "./blogCodeBlockStyles";
+import { Pre, Line, LineNo, LineContent } from "../Components/Blog/blogCodeBlockStyles";
 import { useTheme } from "@mui/material";
 import {
   ReactCompareSlider,
