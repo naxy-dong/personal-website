@@ -1,4 +1,11 @@
 import { Link } from "react-router-dom";
+import { Highlight, themes } from "prism-react-renderer";
+import { Pre, Line, LineNo, LineContent } from "./blogCodeBlockStyles";
+import { useTheme } from "@mui/material";
+import {
+  ReactCompareSlider,
+  ReactCompareSliderImage,
+} from "react-compare-slider";
 
 function BlogParagraph({ children }: { children: React.ReactNode }) {
   return <p>{children}</p>;
@@ -55,10 +62,54 @@ function BlogImage({
   );
 }
 
+function BlogCodeBlock(text: string, language?: string) {
+  const lang = language || "tsx";
+  const globalTheme = useTheme();
+  const theme =
+    globalTheme.palette.mode === "dark"
+      ? themes.nightOwl
+      : themes.nightOwlLight;
+
+  return (
+    <Highlight theme={theme} code={text} language={lang}>
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <Pre className={className} style={style}>
+          {tokens.map((line, i) => (
+            <Line key={i} {...getLineProps({ line })}>
+              <LineNo>{i + 1}</LineNo>
+              <LineContent>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token })} />
+                ))}
+              </LineContent>
+            </Line>
+          ))}
+        </Pre>
+      )}
+    </Highlight>
+  );
+}
+
+function BlogImageSlider(
+  src1: string,
+  src2: string,
+  alt1: string,
+  alt2: string,
+) {
+  return (
+    <ReactCompareSlider
+      itemOne={<ReactCompareSliderImage src={src1} alt={alt1} />}
+      itemTwo={<ReactCompareSliderImage src={src2} alt={alt2} />}
+    />
+  );
+}
+
 export {
   BlogParagraph,
   BlogUnorderedList,
   BlogOrderedList,
   BlogLink,
   BlogImage,
+  BlogCodeBlock,
+  BlogImageSlider,
 };

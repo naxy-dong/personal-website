@@ -1,10 +1,11 @@
-import Blog from "../Pages/Blog";
 import {
   BlogParagraph,
   BlogUnorderedList,
   BlogOrderedList,
   BlogLink,
   BlogImage,
+  BlogCodeBlock,
+  BlogImageSlider,
 } from "../utils/blogutil";
 
 const assetPath = "src/assets/";
@@ -14,13 +15,66 @@ const blogData = [
     title: "Image slider?",
     date: new Date(2024, 0, 3),
     content: () => {
-      const imageSliderLink = (
+      const imageSliderDocLink = (
         <BlogLink
           text="image slider"
+          url="https://react-compare-slider.vercel.app/?path=/story/demos--bounds-padding"
+        />
+      );
+      const taijiImageSliderLink = (
+        <BlogLink
+          text="blog page"
           url="https://taiji-game.com/2022/02/18/83-in-the-final-stretch/"
         />
       );
-      return <></>;
+      const codeBlockExampleLink = (
+        <BlogLink
+          text="code block example"
+          url="https://codesandbox.io/p/sandbox/prism-react-renderer-example-u6vhk?file=%2Fsrc%2FWithLineNumbers.js%3A29%2C37"
+        />
+      );
+      const exampleCode = `import React, { useState } from "react";
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}`;
+
+      return (
+        <>
+          <BlogParagraph>
+            Coming back from playing games + developing my other project. I've
+            been following {codeBlockExampleLink} and implemented the code
+            syntax highlighting to better document my code. Here's an example of
+            the code syntax highlighting below:
+          </BlogParagraph>
+          {BlogCodeBlock(exampleCode)}
+          <BlogParagraph>
+            On top of that, I've also implemented an {imageSliderDocLink} to
+            better demonstrates the difference between the before and after of
+            the website. This is especially demonstrating contrasting
+            differences such as light mode vs darkmode and not clogging up the
+            blog page.
+          </BlogParagraph>
+          {BlogImageSlider(
+            assetPath + "afterCodeblock.png",
+            assetPath + "beforeCodeblock.png",
+            "After code block image",
+            "Before code block image"
+          )}
+          <BlogParagraph>
+            The idea of the image slider is inspired by the creater of taiji
+            when he used it in his {taijiImageSliderLink}
+          </BlogParagraph>
+        </>
+      );
     },
   },
   {
@@ -233,13 +287,14 @@ const blogData = [
             Overall, the codebase is growing rapidly. From 600 lines of code on
             day 1 to 1220 lines of code currently. I don't think I'm writing
             spaghetti code. So that's a good thing, I guess. After looking at
-            the output of the command{" "}
-            <code>find . -name '*' | xargs wc -l</code>, I realized that the
-            assets folder is taking up a lot of lines, and they're mostly
-            images. So I used{" "}
-            <code>find . -name '*' | grep -v '/assets/' | xargs wc -l</code> to
-            exclude the assets folder.
+            the output of the command,
           </BlogParagraph>
+          {BlogCodeBlock("find . -name '*' | xargs wc -l")}
+          <BlogParagraph>
+            I realized that the assets folder is taking up a lot of lines, and
+            they're mostly images. So I exclude the assets folder using:
+          </BlogParagraph>
+          {BlogCodeBlock("find . -name '*' | grep -v '/assets/' | xargs wc -l")}
         </>
       );
     },
